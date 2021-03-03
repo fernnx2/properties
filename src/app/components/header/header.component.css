@@ -1,0 +1,12 @@
+.btn-circle {
+  border-radius: 25px;
+}
+
+.color-blue {
+  color: blue;
+  font-size: 40px;
+}
+
+.color-text {
+  color: rgb(5, 196, 53) !important;
+}
