@@ -10,3 +10,15 @@
 .color-text {
   color: rgb(5, 196, 53) !important;
 }
+
+.navbar-nav.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.navbar-nav.navbar-right {
+  position: absolute;
+  left: 85%;
+  transform: translatex(-1%);
+}

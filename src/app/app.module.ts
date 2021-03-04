@@ -16,7 +16,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     NgbModule,
     ComponentsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   exports:[
 

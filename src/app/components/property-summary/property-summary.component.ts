@@ -9,6 +9,8 @@ export class PropertySummaryComponent implements OnInit {
 
   @Input()
   properties: any;
+
+
   constructor() { }
 
   ngOnInit(): void {
