@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  display: inline-block;
+  background-color: blue !important;
+  width: 50px !important;
+  height: 50px !important;
+}

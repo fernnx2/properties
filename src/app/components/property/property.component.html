@@ -1,79 +1,90 @@
+<ng-container *ngIf="load">
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+    <li [ngbNavItem]="1" class="">
+      <a ngbNavLink > Fotos </a>
+      <ng-template ngbNavContent>
+        <div class="container">
+          <div class="row col-md-12 col-sm-4 col-12">
+            <ngb-carousel *ngIf="properties.id">
+              <ng-template ngbSlide>
+                <div class="picsum-img-wrapper img">
+                  <img src="assets/images/properties/{{properties.id}}/1.jpg" alt="Random first slide">
+                </div>
+                <div class="carousel-caption">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </ng-template>
+              <ng-template ngbSlide>
+                <div class="picsum-img-wrapper img">
+                  <img src="assets/images/properties/{{properties.id}}/2.jpg" alt="Random second slide">
+                </div>
+                <div class="carousel-caption">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </ng-template>
+              <ng-template ngbSlide>
+                <div class="picsum-img-wrapper img">
+                  <img src="assets/images/properties/{{properties.id}}/3.jpg"  alt="Random third slide">
+                </div>
+                <div class="carousel-caption">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </ng-template>
+              <ng-template ngbSlide>
+                <div class="picsum-img-wrapper img">
+                  <img src="assets/images/properties/{{properties.id}}/4.jpg" alt="Random fourth slide">
+                </div>
+                <div class="carousel-caption">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </ng-template>
+              <ng-template ngbSlide>
+                <div class="picsum-img-wrapper img">
+                  <img src="assets/images/properties/{{properties.id}}/5.jpg" alt="Random fourth slide">
+                </div>
+                <div class="carousel-caption">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </ng-template>
+            </ngb-carousel>
 
-    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
-      <li [ngbNavItem]="1" class="">
-        <a ngbNavLink > Fotos</a>
-        <ng-template ngbNavContent>
-          <div class="container">
-            <div class="row col-md-12 col-sm-4 col-12">
-              <ngb-carousel *ngIf="images">
-                <ng-template ngbSlide>
-                  <div class="picsum-img-wrapper">
-                    <img [src]="images[0]" alt="Random first slide">
-                  </div>
-                  <div class="carousel-caption">
-                    <h3>10 seconds between slides...</h3>
-                    <p>This carousel uses customized default values.</p>
-                  </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                  <div class="picsum-img-wrapper">
-                    <img [src]="images[1]" alt="Random second slide">
-                  </div>
-                  <div class="carousel-caption">
-                    <h3>No mouse events...</h3>
-                    <p>This carousel doesn't pause or resume on mouse events</p>
-                  </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                  <div class="picsum-img-wrapper">
-                    <img [src]="images[2]"  alt="Random third slide">
-                  </div>
-                  <div class="carousel-caption">
-                    <h3>No keyboard...</h3>
-                    <p>This carousel uses customized default values.</p>
-                  </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                  <div class="picsum-img-wrapper">
-                    <img [src]="images[3]" alt="Random fourth slide">
-                  </div>
-                  <div class="carousel-caption">
-                    <h3>And no wrap after last slide.</h3>
-                    <p>This carousel uses customized default values.</p>
-                  </div>
-                </ng-template>
-              </ngb-carousel>
 
-
-            </div>
           </div>
-        </ng-template>
-      </li>
-      <li [ngbNavItem]="2" >
-        <a ngbNavLink>Mapa</a>
-        <ng-template ngbNavContent>
-          <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
-            farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
-            ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
-            helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
-            8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
-            stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
-        </ng-template>
-      </li>
-    </ul>
-
-    <div [ngbNavOutlet]="nav" class="mt-2"></div>
-
-    <app-property-summary></app-property-summary>
-
-    <div class="container">
-      <div class="row ">
-        <div class="col-md-5"></div>
-        <div class="col-md-4 mb-5">
-          <button class="btn btn-lg btn-circle btn-outline-success my-2 my-sm-0" type="submit">Ver Siguiente</button>
         </div>
-        <div class="col-md-4"></div>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="2" >
+      <a ngbNavLink>Mapa</a>
+      <ng-template ngbNavContent>
+        <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+          farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+          ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
+          helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
+          8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
+          stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+      </ng-template>
+    </li>
+  </ul>
+
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+  <app-property-summary [properties]="properties"></app-property-summary>
+
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-5"></div>
+      <div class="col-md-4 mb-5">
+        <button class="btn btn-lg btn-circle btn-outline-success my-2 my-sm-0" (click)="handleChangeProperty()">Ver Siguiente</button>
       </div>
+      <div class="col-md-4"></div>
     </div>
+  </div>
+</ng-container>
+
 
 

@@ -7,6 +7,8 @@ import { PropertySummaryComponent } from './property-summary/property-summary.co
 import { BootstrapIconsModule } from 'ng-bootstrap-icons';
 import { allIcons } from 'ng-bootstrap-icons/icons';
 import { FooterComponent } from './footer/footer.component';
+import { HttpService } from '../services/Http.service';
+import { BooleanTransformPipe } from '../shared/pipes/boolean.pipe';
 
 @NgModule({
   imports: [
@@ -15,7 +17,9 @@ import { FooterComponent } from './footer/footer.component';
     BootstrapIconsModule.pick(allIcons)
   ],
   exports: [HeaderComponent, PropertyComponent,BootstrapIconsModule,FooterComponent],
-  declarations: [HeaderComponent, PropertyComponent, PropertySummaryComponent, FooterComponent],
-  providers: [],
+  declarations: [HeaderComponent, PropertyComponent, PropertySummaryComponent, FooterComponent, BooleanTransformPipe],
+  providers: [
+    HttpService
+  ],
 })
 export class ComponentsModule { }

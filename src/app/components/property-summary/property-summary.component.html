@@ -1,15 +1,17 @@
 <div class="card border-light mt-4 mb-3" style="max-width: 100%;">
   <div class="card-header">
     <strong class="colorblue">
-      Departamento de Lujo recien remodelado
+     {{properties.title}}
     </strong>
   </div>
   <div class="card-body">
     <div class="container">
       <div class="row">
-        <p class="card-text col-md-4">Descripcion del apartamento y donde se ubica.</p>
+        <p class="card-text col-md-4">
+          {{properties.address}}
+        </p>
         <p class="col-md-4"></p>
-        <h3 class="card-title col-md-4">$50000</h3>
+        <h3 class="card-title col-md-4">{{properties.currency}} {{properties.price}}</h3>
       </div>
     </div>
 
@@ -26,7 +28,7 @@
       <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
         aria-controls="collapseOne1">
         <h5 class="mb-0">
-          Collapsible Group Item #1 <i class="fas fa-angle-down rotate-icon"></i>
+          Descripcion <i class="fas fa-angle-down rotate-icon"></i>
         </h5>
       </a>
     </div>
@@ -34,13 +36,7 @@
     <!-- Card body -->
     <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-        eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-        nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-        labore sustainable VHS.
+       {{properties.description}}
       </div>
     </div>
 
@@ -63,7 +59,7 @@
             <bi name="house" class="big fill icon-color"></bi>
             <div class="media-body">
               <h5 class="mt-0">Tipo de domicilio</h5>
-               <p>apartamento</p>
+               <p>{{properties.details.type}}</p>
             </div>
           </div>
         </div>
@@ -72,7 +68,7 @@
             <bi name="sort-up" class="big fill icon-color"></bi>
             <div class="media-body">
               <h5 class="mt-0">Niveles</h5>
-               <p>4</p>
+               <p>{{properties.details.floors}}</p>
             </div>
           </div>
         </div>
@@ -81,36 +77,7 @@
             <bi name="house" class="big fill icon-color"></bi>
             <div class="media-body">
               <h5 class="mt-0">Tamaño</h5>
-               <p>326</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class=" col-md-4">
-          <div class="media">
-            <bi name="house" class="big fill icon-color"></bi>
-            <div class="media-body">
-              <h5 class="mt-0">Tipo de domicilio</h5>
-               <p>apartamento</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="media">
-            <bi name="sort-up" class="big fill icon-color"></bi>
-            <div class="media-body">
-              <h5 class="mt-0">Niveles</h5>
-               <p>4</p>
-            </div>
-          </div>
-        </div>
-        <div class="card-title col-md-4">
-          <div class="media">
-            <bi name="aspect-ratio" class="big fill icon-color"></bi>
-            <div class="media-body">
-              <h5 class="mt-0">Tamaño</h5>
-               <p>326</p>
+               <p>{{properties.details.size}}</p>
             </div>
           </div>
         </div>
@@ -121,7 +88,7 @@
             <bi name="truck" class="big fill icon-color"></bi>
             <div class="media-body">
               <h5 class="mt-0">Cochera</h5>
-               <p>si</p>
+               <p>{{properties.details.parking}}</p>
             </div>
           </div>
         </div>
@@ -130,7 +97,7 @@
             <bi name="pip" class="big fill icon-color"></bi>
             <div class="media-body">
               <h5 class="mt-0">Habitaciones</h5>
-               <p>4</p>
+               <p>{{properties.details.bedrooms}}</p>
             </div>
           </div>
         </div>
@@ -139,7 +106,7 @@
             <bi name="house-fill" class="big fill icon-color"></bi>
             <div class="media-body">
               <h5 class="mt-0">Baños</h5>
-               <p>2</p>
+               <p>{{properties.details.bathrooms}}</p>
             </div>
           </div>
         </div>
@@ -150,7 +117,7 @@
             <bi name="house" class="big fill icon-color"></bi>
             <div class="media-body">
               <h5 class="mt-0">Aire Acondicionado</h5>
-               <p>si</p>
+               <p>{{properties.details.air_conditioner | booleanTransform}}</p>
             </div>
           </div>
         </div>
@@ -159,7 +126,7 @@
             <bi name="sort-up" class="big fill icon-color"></bi>
             <div class="media-body">
               <h5 class="mt-0">Terraza</h5>
-               <p>si</p>
+               <p>{{properties.details.terrace | booleanTransform}}</p>
             </div>
           </div>
         </div>
@@ -168,7 +135,7 @@
             <bi name="house" class="big fill icon-color"></bi>
             <div class="media-body">
               <h5 class="mt-0">Jardin</h5>
-               <p>si</p>
+               <p>{{properties.details.backyard | booleanTransform}}</p>
             </div>
           </div>
         </div>
@@ -179,7 +146,7 @@
             <bi name="door-open" class="big fill icon-color"></bi>
             <div class="media-body">
               <h5 class="mt-0">Cuarto de servicio</h5>
-               <p>si</p>
+               <p>{{properties.details.service_room | booleanTransform}}</p>
             </div>
           </div>
         </div>
@@ -188,7 +155,7 @@
             <bi name="diagram-2-fill" class="big fill icon-color"></bi>
             <div class="media-body">
               <h5 class="mt-0">Bodega</h5>
-               <p>si</p>
+               <p>{{properties.details.warehouse | booleanTransform}}</p>
             </div>
           </div>
         </div>
@@ -197,7 +164,7 @@
             <bi name="shield-check" class="big fill-light icon-color"></bi>
             <div class="media-body">
               <h5 class="mt-0">Seguridad</h5>
-               <p>si</p>
+               <p>{{properties.details.security | booleanTransform}}</p>
             </div>
           </div>
         </div>

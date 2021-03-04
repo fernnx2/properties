@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-property-summary',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropertySummaryComponent implements OnInit {
 
+  @Input()
+  properties: any;
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.properties);
   }
 
 }

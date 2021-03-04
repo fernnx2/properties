@@ -5,3 +5,13 @@
 .btn-circle {
   border-radius: 25px;
 }
+
+.img {
+  background-size: cover;
+  position: relative;
+  left: 25%;
+  display: flex;
+  flex-flow: row;
+  width: 1000px;
+  height: 500px;
+}
